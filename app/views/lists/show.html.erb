@@ -1,3 +1,9 @@
 <div class="container">
   <h1><%= @list.name %></h1>
+  <% @list.movies.each do |movie| %>
+    <%= image_tag movie.poster_url, alt: "", width: 200 %>
+    <%= movie.title %>
+    <%= movie.rating %>
+    <%= movie.overview %>
+  <% end %>
 </div>
